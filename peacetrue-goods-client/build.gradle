@@ -1,0 +1,7 @@
+description '商品客户端'
+
+dependencies {
+    api project(":peacetrue-goods-service-api")
+    api 'org.springframework.data:spring-data-commons'
+    api 'com.playtika.reactivefeign:feign-reactor-spring-configuration'
+}

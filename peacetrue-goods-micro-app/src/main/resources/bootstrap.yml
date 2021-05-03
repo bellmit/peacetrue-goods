@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: peacetrue-goods
+  cloud:
+    config:
+      uri: http://localhost:8888
+      fail-fast: true
+
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+  cloud:
+    config:
+      uri: https://peacetrue:${MICROSERVICE_SECURITY_PASSWORD}@peacetrue.cn:8888

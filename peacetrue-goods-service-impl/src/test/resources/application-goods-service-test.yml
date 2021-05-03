@@ -1,0 +1,19 @@
+logging:
+  level:
+    com.github.peacetrue: trace
+#    org.springframework: debug
+
+db:
+  hostname: localhost
+  username: root
+  password: 12345678
+  schema: common
+
+spring:
+  r2dbc:
+    url: r2dbcs:mysql://${db.hostname}:3306/${db.schema}?autoreconnect=true&useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true&sslMode=DISABLED
+    username: ${db.username}
+    password: ${db.password}
+peacetrue:
+  init:
+    script-locations: classpath:/schema-goods-mysql.sql

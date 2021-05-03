@@ -1,0 +1,13 @@
+description '商品控制器'
+
+dependencies {
+    api project(":peacetrue-goods-service-api")
+    implementation "com.github.peacetrue:peacetrue-spring"
+    implementation "org.springframework.boot:spring-boot-starter-webflux"
+    implementation "org.springframework.data:spring-data-commons"
+
+    testImplementation project(':peacetrue-goods-service-impl')
+    testImplementation project(path: ':peacetrue-goods-service-impl', configuration: 'testArtifacts')
+    testRuntimeOnly 'dev.miku:r2dbc-mysql'
+    testRuntimeOnly 'mysql:mysql-connector-java'
+}
